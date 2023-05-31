@@ -45,79 +45,8 @@ export const Sidebar = () => {
       lastMessage: "привет делай быстрее",
       lastDate: "20.04.2023",
     },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
 
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
-    {
-      phone: "+7 9834323242",
-      name: "Татьяна",
-      lastMessage: "привет делай быстрее",
-      lastDate: "20.04.2023",
-    },
+
 
 
   ];
@@ -141,10 +70,11 @@ export const Sidebar = () => {
   const Users = () => {
     return (
       <div className="overflow-y-scroll max-h-screen scroll-m-8">
-        {users.map((user: IUser) => {
+        {users.map((user: IUser, index) => {
           return (
             <User
             {...user}
+            key={index}
             />
           );
         })}

@@ -1,13 +1,22 @@
 import { useRef } from "react";
+import { useLocalStorage } from "../utils/useLocalStorage";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const idRef = useRef<HTMLInputElement>(null);
   const tokenRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
+  const [, setId] = useLocalStorage("id", "");
+  const [, setToken] = useLocalStorage( "token", "");
   const handlerAuth = () => {
     const idValue = idRef.current?.value;
     const tokenValue = tokenRef.current?.value;
     if (idValue && tokenValue) {
-      console.log(idValue, tokenValue);
+      setId(idValue);
+      setToken(tokenValue);
+      idRef.current.value = "";
+      tokenRef.current.value = "";
+      navigate("/")
     }
   };
   return (
